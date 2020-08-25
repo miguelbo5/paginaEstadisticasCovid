@@ -3,12 +3,15 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "homepage": "https://miguelbo5.github.io/paginaEstadisticasCovid/index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "gh-pages -d dist"
   },
-  "author": "",
+  "author": "Miguel Bo",
   "license": "ISC",
   "dependencies": {
+    "gh-pages": "^3.1.0",
     "unirest": "^0.6.0"
   }
 }
