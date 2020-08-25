@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+    <link rel="shortcut icon" href="./assets/img/favicon.png" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/perCountry.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Per country</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./totals.html">Totals</a></li>
+            <li><a class="current-page-li" href="./perCountry.html">Countries</a></li>
+        </ul>
+
+        <form class="form-country">
+            <input id="formCountryName" type="text" placeholder="Search..." name="search">
+            <button type="button" id="formButton"><i class="fa fa-search"></i></button>
+        </form>
+
+        <div id="containerResults" class="container-results">
+
+            <p id="countryName" class="country-name"></p>
+
+            <h4>Confirmed cases: <span id="confirmedCases"></span></h4>
+
+            <h4>Recovered people: <span id="recovered"></span></h4>
+
+            <h4>Critical cases: <span id="criticalCases"></span></h4>
+
+            <h4>Total deaths: <span id="totalDeaths"></span></h4>
+
+        </div>
+   
+    </div>
+
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
