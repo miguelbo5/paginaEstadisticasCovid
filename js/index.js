@@ -23,7 +23,6 @@ function getDataCountry(countryName) {
   };
 
   $.ajax(settings).done(function (response) {
-    console.log(response);
     if (response[0].country) {
       let obj = JSON.parse(JSON.stringify(response));
 
@@ -40,6 +39,18 @@ function showContainerResults(obj) {
   let recoveredPeople = results.recovered;
   let criticalCases = results.critical;
   let deaths = results.deaths;
+  let lastUpdate = new Date(results.lastUpdate);
+
+  let formatedUpdateDate =
+    lastUpdate.getDay() +
+    "/" +
+    lastUpdate.getMonth() +
+    "/" +
+    lastUpdate.getFullYear() +
+    " at " +
+    lastUpdate.getHours() +
+    ":" +
+    lastUpdate.getMinutes();
 
   document.getElementById("containerResults").style.visibility = "visible";
 
@@ -48,21 +59,5 @@ function showContainerResults(obj) {
   document.getElementById("recovered").innerText = recoveredPeople;
   document.getElementById("criticalCases").innerText = criticalCases;
   document.getElementById("totalDeaths").innerText = deaths;
+  document.getElementById("lastUpdate").innerText = formatedUpdateDate;
 }
-
-// var settingsTotalsRequest = {
-//   async: true,
-//   crossDomain: true,
-//   url: "https://covid-19-data.p.rapidapi.com/totals?format=json",
-//   method: "GET",
-//   headers: {
-//     "x-rapidapi-host": "covid-19-data.p.rapidapi.com",
-//     "x-rapidapi-key": "dbc1dfd886msh5af1fd9bd5dca23p1bda55jsnce6712877c9e",
-//   },
-// };
-
-// $.ajax(settingsPerCountryRequest).done(function (response) {
-//   console.log(response);
-//   var obj = JSON.parse(JSON.stringify(response));
-//   console.log(obj[0].country);
-// });
