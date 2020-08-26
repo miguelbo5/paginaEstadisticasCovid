@@ -1,7 +1,7 @@
 /* Para poder usar otras fuentes */
 @font-face {
   font-family: slim joe;
-  src: url(../assets/fonts/Slim\Joe.otf);
+  src: url("../assets/fonts/Slim\Joe.otf");
 }
 
 .container {

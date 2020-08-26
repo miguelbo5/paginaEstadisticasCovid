@@ -1,6 +1,6 @@
 @font-face {
   font-family: big john;
-  src: url(../assets/fonts/BIG\ JOHN.otf);
+  src: url("../assets/fonts/BIG\ JOHN.otf");
 }
 
 .line {
