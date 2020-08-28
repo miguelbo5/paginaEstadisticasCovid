@@ -28,9 +28,9 @@ function loadResults(results) {
   let lastUpdate = new Date(results.lastUpdate);
 
   let formatedUpdateDate =
-    lastUpdate.getDay() +
+    lastUpdate.getDate() +
     "/" +
-    lastUpdate.getMonth() +
+    (lastUpdate.getMonth() + 1) +
     "/" +
     lastUpdate.getFullYear() +
     " at " +
